@@ -6,6 +6,8 @@ import { auth } from "./firebase";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
+import "../components/sass/form.scss";
+
 const Daftar = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,35 +29,40 @@ const Daftar = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="container grid">
-        <h1>Daftar</h1>
+      <div className="form__container container grid">
+        <div className="content">
+          <h1>Daftar</h1>
+          {msg && <p>{msg}</p>}
 
-        {msg && <p>{msg}</p>}
+          <div className="box">
+            <label>
+              Username
+              <input
+                type="text"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
 
-        <label>
-          Username
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+            <label>
+              Password
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
 
-        <label>
-          Password
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-
-        <button type="submit">Daftar</button>
-        <p>
-          Sudah punya akun? <Link to="/login">Login</Link>
-        </p>
+            <div className="btn">
+              <button type="submit">Daftar</button>
+              <p>
+                Sudah Memiliki Akun? <Link to="/login">Login</Link>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   );

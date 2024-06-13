@@ -7,6 +7,9 @@ import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { useNavigate } from "react-router-dom";
+
+import "../components/sass/form.scss";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,35 +35,40 @@ const Login = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="container grid">
-        <h1>Login</h1>
+      <div className="form__container container grid">
+        <div className="content">
+          <h1>Login</h1>
+          {msg && <p>{msg}</p>}
 
-        {msg && <p>{msg}</p>}
+          <div className="box">
+            <label>
+              Username
+              <input
+                type="text"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
 
-        <label>
-          Username
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+            <label>
+              Password
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
 
-        <label>
-          Password
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-
-        <button type="submit">Login</button>
-        <p>
-          Already have an account? <Link to="/daftar">Daftar</Link>
-        </p>
+            <div className="btn">
+              <button type="submit">Login</button>
+              <p>
+                Belum Punya Akun? <Link to="/daftar">Daftar</Link>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   );

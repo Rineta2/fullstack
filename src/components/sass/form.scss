@@ -1,0 +1,89 @@
+@import "./index.scss";
+
+form {
+  .form__container {
+    padding: 1rem 5%;
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 35%;
+      padding: 7rem 2rem;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+        line-height: 1.5;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        label {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+          letter-spacing: 1px;
+          input {
+            margin-top: 1rem;
+            width: 100%;
+            height: 45px;
+            padding: 0 0.5rem;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 6px;
+            &:focus {
+              border: 1px solid $title-c;
+            }
+          }
+        }
+
+        .btn {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          button {
+            width: 100%;
+            height: 45px;
+            border: none;
+            background-color: $title-c;
+            color: $body-c;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            a {
+              color: $title-c;
+              margin-left: 0.5rem;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

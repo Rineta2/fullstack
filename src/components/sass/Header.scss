@@ -1,0 +1,52 @@
+@import "./index.scss";
+
+header {
+  position: sticky;
+  width: 100%;
+  z-index: 100;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc($hh * 1.5);
+    width: 100%;
+    padding: 1rem 5%;
+    ul {
+      display: flex;
+      gap: 2rem;
+
+      li {
+        a {
+          color: $title-c;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .nav__actions {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        width: 100px;
+        height: 45px;
+        background-color: $title-c;
+        color: $body-c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        border-radius: 12px;
+      }
+
+      .menu {
+        display: none;
+        .hamburger {
+          font-size: 1.3rem;
+          color: $title-c;
+        }
+      }
+    }
+  }
+}
