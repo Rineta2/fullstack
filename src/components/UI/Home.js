@@ -17,7 +17,7 @@ const Home = () => {
                 <h1>{item.title}</h1>
                 <h3>{item.text}</h3>
 
-                <Link to={item.path} className="btn">
+                <Link to={item.path} className="button">
                   {item.name}
                 </Link>
               </div>
