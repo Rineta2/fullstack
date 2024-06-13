@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
-
 import { auth } from "./firebase";
 
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -37,7 +35,7 @@ const Login = () => {
     <form onSubmit={handleSubmit}>
       <div className="form__container container grid">
         <div className="content">
-          <h1>Login</h1>
+          <h1>Admin</h1>
           {msg && <p>{msg}</p>}
 
           <div className="box">
@@ -63,9 +61,6 @@ const Login = () => {
 
             <div className="btn">
               <button type="submit">Login</button>
-              <p>
-                Belum Punya Akun? <Link to="/daftar">Daftar</Link>
-              </p>
             </div>
           </div>
         </div>

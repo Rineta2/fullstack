@@ -5,19 +5,19 @@ import Header from "./components/UI/Header";
 import Home from "./components/UI/Home";
 import Dashboard from "./auth/Dashboard";
 import Login from "./auth/Login";
-import Daftar from "./auth/Daftar";
 
+const disableHeader = ["/login", "/dashboard"];
+const disableFooter = ["/login", "/dashboard"];
 const App = () => {
   return (
     <main>
-      <Header />
+      {!disableHeader.includes(window.location.pathname) && <Header />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/daftar" element={<Daftar />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-      <Footer />
+      {!disableFooter.includes(window.location.pathname) && <Footer />}
     </main>
   );
 };

@@ -51,3 +51,38 @@ export const homeImg = [
     img: home,
   },
 ];
+
+export const AboutData = [
+  {
+    id: 1,
+    title: "Tempat untuk semua orang",
+    img: home,
+  },
+];
+
+export const aboutText = [
+  {
+    id: 1,
+    text: "Kami percaya bahwa setiap orang berhak mendapatkan ruang yeksklusif. Klaim ruang Anda dengan komunitas broker tepercaya kami dan beragam properti di platform kami.",
+  },
+];
+
+export const dataLinks = [
+  {
+    id: 1,
+    name: "Beli",
+    path: "#product",
+  },
+
+  {
+    id: 2,
+    name: "Jual",
+    path: "/jual",
+  },
+
+  {
+    id: 3,
+    name: "Sewa",
+    path: "/Sewa",
+  },
+];

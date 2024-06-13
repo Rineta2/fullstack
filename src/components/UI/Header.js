@@ -26,12 +26,8 @@ const Header = () => {
           })}
         </ul>
 
-        <div className="nav__actions">
-          <Link to="/login">Login</Link>
-
-          <div className="menu">
-            <CiMenuFries className="hamburger" />
-          </div>
+        <div className="menu">
+          <CiMenuFries className="hamburger" />
         </div>
       </nav>
     </header>
